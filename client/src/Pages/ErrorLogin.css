@@ -1,0 +1,33 @@
+/* src/components/ErrorLogin.css */
+.error-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../../public/assets/img/Gandalf.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.error-login-message {
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-button {
+    background-color: #000; /* Bleu pour le bouton de redirection */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #FF977D;
+}

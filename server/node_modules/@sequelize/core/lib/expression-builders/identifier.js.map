@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/expression-builders/identifier.ts"],
+  "sourcesContent": ["import { BaseSqlExpression, SQL_IDENTIFIER } from './base-sql-expression.js';\n\n/**\n * Use {@link identifier} instead.\n */\nexport class Identifier extends BaseSqlExpression {\n  protected declare readonly [SQL_IDENTIFIER]: 'identifier';\n\n  constructor(readonly value: string) {\n    super();\n  }\n}\n\n/**\n * Used to represent a value that will either be escaped to a literal, or a bind parameter.\n * Unlike {@link attribute} and {@link col}, this identifier will be escaped as-is,\n * without mapping to a column name or any other transformation.\n *\n * @param value\n * @example\n * ```ts\n * sequelize.query(sql`SELECT * FROM users WHERE ${identifier('firstName')} = 'John'`);\n * ```\n *\n * Will generate (identifier quoting depending on the dialect):\n *\n * ```sql\n * SELECT * FROM users WHERE \"firstName\" = 'John'\n * ```\n */\nexport function identifier(value: string): Identifier {\n  return new Identifier(value);\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,iCAAkD;AAK3C,MAAM,mBAAmB,6CAAkB;AAAA,EAGhD,YAAqB,OAAe;AAClC,UAAM;AADa;AAAA,EAErB;AACF;AAmBO,SAAS,WAAW,OAA2B;AACpD,SAAO,IAAI,WAAW,KAAK;AAC7B;",
+  "names": []
+}

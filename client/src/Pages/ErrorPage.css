@@ -1,0 +1,38 @@
+/* src/components/ErrorPage.css */
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../../public/assets/img/love_daulphins.jpg);
+    background-position: center;
+}
+
+.neon-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 50px;
+    color: #fff;
+    text-shadow:
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #FF977D,
+            0 0 30px #FF977D,
+            0 0 40px #FF977D,
+            0 0 50px #FF977D,
+            0 0 60px #FF977D,
+            0 0 70px #FF977D;
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* Effet de clignotement pour rendre l'effet néon plus vivant */
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}

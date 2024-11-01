@@ -1,0 +1,772 @@
+/* --------------------- 0. SETTINGS ---------------------  */
+/* ---------- 0.1. Body and text ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+a:visited {
+  color: initial;
+}
+
+ul li {
+  list-style: none;
+}
+
+:root {
+  font-family: "DM Sans", sans-serif;
+}
+
+/* --------------------- 1. HEADER --------------------- */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5% 7.5%;
+}
+
+/* ---------- 1.1. Logo ---------- */
+.header {
+  img {
+    height: 48px;
+    object-fit: cover;
+  }
+}
+
+/* ---------- 1.2. Nav ---------- */
+.header__nav {
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    font-size: 20px;
+  }
+}
+
+/* ---------- 1.3. Log in + Sign in ---------- */
+.header {
+  div {
+    display: flex;
+    gap: 1em;
+
+    button {
+      font-size: 16px;
+      height: 3em;
+      padding: 0 1em;
+      border-radius: 1.5em;
+    }
+
+    button:nth-child(1) {
+      background: black;
+      color: white;
+    }
+
+    button:nth-child(2) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid 1px black;
+    }
+  }
+}
+
+/* --------------------- 2. HOME --------------------- */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------- 2.1. Graffic ---------- */
+.home__graffic {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: calc(60vw);
+  transition: all ease-in-out 0.5s;
+}
+
+.home__graffic--left {
+  left: 0;
+}
+
+.home__graffic--right {
+  left: 39.4%;
+}
+
+.home__graffic--bg-1 {
+  background: url("../public/assets/img/bg-1.png");
+  background-size: cover;
+  height: 100%;
+  width: calc(100% / 3);
+}
+
+.home__graffic--bg-2 {
+  background: url("../public/assets/img/bg-2.png");
+  background-size: cover;
+  height: 100%;
+  width: calc((100% / 3) * 2);
+}
+
+/* ---------- 2.2. Container ---------- */
+.home__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5%;
+  height: 100vh;
+  width: 40%;
+  gap: 1em;
+}
+
+/* ---------- 2.2.1. Cats ---------- */
+.home__container__nav--cats {
+  width: fit-content;
+  width: 100%;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+  }
+}
+
+/* ---------- 2.2.2. Tag line + Log in ---------- */
+.home__container--content {
+  font-family: "Fira Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+}
+
+/* ---------- 2.2.2.1. Tag line ---------- */
+.home__container--tag-line {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  h1 {
+    font-size: 4.75em;
+  }
+
+
+  h2 {
+    font-size: 1.75em;
+  }
+}
+
+/* ---------- 2.2.2.2. Log in ---------- */
+.home__container--log-in__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+
+  input {
+    width: 30em;
+    max-width: 100%;
+    height: 3em;
+    border-radius: 1.5em;
+    padding: 0 1em;
+  }
+
+}
+
+.home__container--log-in__form__btns {
+  display: flex;
+  gap: 1em;
+
+  button {
+    font-size: 0.9em;
+    height: 3em;
+    padding: 0 1em;
+    border-radius: 1.5em;
+  }
+
+  button:nth-child(1) {
+    background: black;
+    color: white;
+  }
+
+  button:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+  }
+}
+
+/* ---------- 2.2.3. Sign in ---------- */
+.home__container--sign-in__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+
+  input {
+    min-width: 26em;
+    height: 3em;
+    border-radius: 1.5em;
+    padding: 0 1em;
+  }
+}
+
+.home__container--sign-in__form__select--user-type {
+  width: fit-content;
+  height: 3em;
+  border-radius: 1.5em;
+  padding: 0 1em;
+  margin-bottom: 1em;
+}
+
+.home__container--sign-in__form__btns {
+  display: flex;
+  gap: 1em;
+
+  button {
+    font-size: 0.9em;
+    height: 3em;
+    padding: 0 1em;
+    border-radius: 1.5em;
+  }
+
+  button:nth-child(1) {
+    background: black;
+    color: white;
+  }
+
+  button:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+  }
+}
+
+/* ---------- 2.2.3. SN ---------- */
+.home__container__nav--sn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+
+  a {
+    height: 2em;
+    width: 2em;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    img {
+      height: 60%;
+      object-fit: cover;
+    }
+  }
+}
+
+/* --------------------- 3. ADS --------------------- */
+.jobs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  padding: 48px 0;
+  gap: 2em;
+
+  h3 {
+    font-size: 24px;
+    color: #FF977D;
+  }
+
+  h1 {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 64px;
+    font-weight: 500;
+    max-width: 700px;
+    text-align: center;
+
+    strong {
+      font-weight: 800;
+    }
+  }
+
+  input {
+    min-width: 26em;
+    height: 3em;
+    border-radius: 1.5em;
+    padding: 0 1em;
+  }
+}
+
+/* ---------- 3.1. Cards ---------- */
+.jobs__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em 2.5%;
+  width: 80%;
+}
+
+.jobs__cards__card {
+  min-height: 25em;
+  width: 48.75%;
+  padding: 8px;
+  border-radius: 48px;
+  background: linear-gradient(160deg, rgba(96, 140, 230, 1) 0%, rgba(167, 189, 235, 1) 100%);
+  background-size: 400% 400%;
+  animation: gradientMove 3s ease infinite;
+}
+
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.jobs__cards__card--content {
+  padding: 32px;
+  min-height: 90%;
+  border-radius: 42px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jobs__cards__card--title {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    border: solid 1px rgb(219, 204, 204);
+
+    img {
+      height: 70%;
+      object-fit: cover;
+    }
+  }
+
+  figcaption {
+    font-size: 48px;
+  }
+}
+
+.jobs__cards__card--separation {
+  height: 1.5px;
+  width: 100%;
+  background: rgb(219, 204, 204);
+}
+
+.jobs__cards__card--details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+
+  h4 {
+    font-size: 40px;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 0;
+
+    figure {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 50%;
+
+      img {
+        height: 24px;
+        object-fit: cover;
+      }
+
+      figcaption {
+        font-size: 24px;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 32px;
+    background: black;
+    color: white;
+    font-size: 24px;
+  }
+}
+
+.jobs__modal {
+  width: 100vw;
+  height: 85.25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jobs__modal__content {
+  background: linear-gradient(160deg, rgba(96, 140, 230, 1) 0%, rgba(167, 189, 235, 1) 100%);
+  padding: 2em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: 400% 400%;
+  animation: gradientMove 3s ease infinite;
+}
+
+.jobs__modal__content__card {
+  background: white;
+  padding: 2em;
+  border-radius: 8px;
+  width: 95%;
+  height: 87.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 2em;
+
+  h2 {
+    font-size: 3em;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+  figure {
+    display: flex;
+    align-items: start;
+    gap: 0.5em;
+    img {
+      height: 1.25em;
+      object-fit: cover;
+    }
+    figcaption {
+      font-size: 1.25em;
+    }
+  }
+  button {
+      font-size: 16px;
+      height: 3em;
+      padding: 0 1em;
+      border-radius: 1.5em;
+}
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pagination a {
+  margin: 0 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.pagination .active a {
+  font-weight: bold;
+  color: #FF977D;
+}
+
+/* --------------------- 4. ABOUT US --------------------- */
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+/* ---------- 4.1. Images ---------- */
+.about-us {
+  figure {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+
+    img {
+      height: 500px;
+      width: 500px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    img:hover {
+      animation: rotating 2s linear infinite;
+    }
+
+    figcaption {
+      font-size: 128px;
+      text-align: center;
+    }
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* --------------------- 5. PROFILE --------------------- */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  padding: 48px 0;
+  gap: 2em;
+
+  div {
+    max-width: 65rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+  }
+
+
+}
+
+.profile__opt__btns {
+  button {
+    font-size: 16px;
+    height: 3em;
+    padding: 0 1em;
+    border-radius: 1.5em;
+  }
+
+  button:nth-child(1) {
+    background: black;
+    color: white;
+  }
+
+  button:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+  }
+}
+
+/* ---------- 5.1. Table ---------- */
+.profile__table {
+  max-width: 65rem;
+  width: 100%;
+  border: solid rgba(0, 0, 0, 1) 0.1px;
+  border-collapse: collapse;
+
+  th,
+  td {
+    border: solid rgba(0, 0, 0, 1) 0.1px;
+    border-collapse: collapse;
+    padding: 2%;
+  }
+
+  th {
+    text-align: start;
+
+  }
+
+  th:nth-child(1) {
+    width: 25%;
+  }
+
+  th:nth-child(2) {
+    width: 50%;
+  }
+
+  th:nth-child(3) {
+    width: 12.5%;
+  }
+
+  th:nth-child(4) {
+    width: 12.5%;
+  }
+
+  td div {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.picto-pencil,
+.picto-cross {
+  height: 1.5rem;
+  width: auto;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* ---------- 5.1. Form ---------- */
+.profile__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+
+  input {
+    width: 30em;
+    max-width: 100%;
+    height: 3em;
+    border-radius: 1.5em;
+    padding: 0 1em;
+  }
+
+  textarea {
+    width: 30em;
+    max-width: 100%;
+    height: 9em;
+    border-radius: 1.5em;
+    padding: 1em 1em;
+  }
+
+  button {
+    font-size: 0.9em;
+    height: 3em;
+    padding: 0 1em;
+    border-radius: 1.5em;
+    background: black;
+    color: white;
+  }
+}
+
+
+
+
+
+/* -------------------------- DESKTOP M --------------------------  */
+@media screen and (max-width: 1440px) {
+  .jobs__cards__card {
+    width: 90%;
+    padding: 8px;
+    border-radius: 48px;
+  }
+}
+
+@media screen and (max-width: 1336px) {
+  .home__container {
+    width: 50%;
+  }
+
+  .home__graffic {
+    width: 50vw;
+  }
+
+  .home__graffic--right {
+    left: 50%;
+  }
+}
+
+/* -------------------------- DESKTOP S --------------------------  */
+@media screen and (max-width: 1201px) {
+  .home {}
+}
+
+/* -------------------------- TABLET L --------------------------  */
+@media screen and (max-width: 1032px) {
+  .home__container--tag-line {
+    h1 {
+      font-size: 3.135em;
+    }
+
+    h2 {
+      font-size: 1.155em;
+    }
+  }
+}
+
+/* -------------------------- TABLET M --------------------------  */
+@media screen and (max-width: 807px) {
+  .home__container {
+    width: 100%;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .jobs__cards__card--details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  
+    h4 {
+      font-size: 40px;
+    }
+  
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px 0;
+  
+      figure {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 50%;
+  
+        img {
+          height: 24px;
+          object-fit: cover;
+        }
+  
+        figcaption {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+/* -------------------------- TABLET S --------------------------  */
+@media screen and (max-width: 553px) {}
+
+/* -------------------------- MOBILE --------------------------  */
